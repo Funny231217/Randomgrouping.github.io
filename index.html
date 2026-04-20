@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>グループ分けツール</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+
+        <header>
+            <h1>グループ分け</h1>
+        </header>
+
+        <!-- 入力 -->
+        <section class="input-section">
+            <div class="input-area">
+                <input type="text"
+                       id="nameInput"
+                       placeholder="名前を入力"
+                       aria-label="名前入力">
+                <button id="addBtn" class="add-btn">追加</button>
+            </div>
+        </section>
+
+        <!-- 情報・操作 -->
+        <section class="control-section">
+            <div class="info-bar">
+                <span id="count">0人</span>
+
+                <div class="bulk-actions">
+                    <button id="selectAllBtn">全選択</button>
+                    <button id="clearBtn">全解除</button>
+                    <button id="resetBtn">リセット</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 名前リスト -->
+        <section>
+            <ul id="nameList" aria-label="名前リスト"></ul>
+        </section>
+
+        <!-- グループ分け -->
+        <section class="group-section">
+            <div class="group-controls">
+                <label for="groupSize" class="sr-only">グループ人数</label>
+                <select id="groupSize">
+                    <option value="2">2人</option>
+                    <option value="3">3人</option>
+                    <option value="4">4人</option>
+                    <option value="5">5人</option>
+                    <option value="6">6人</option>
+                </select>
+
+                <button id="groupBtn">グループ分け</button>
+            </div>
+
+            <div id="groupResult"></div>
+        </section>
+
+        <!-- 保存 -->
+        <section class="save-section">
+            <div class="save-area">
+                <input type="text"
+                       id="setName"
+                       placeholder="セット名（例：クラスA）"
+                       aria-label="セット名入力">
+                <button id="saveBtn">保存</button>
+            </div>
+        </section>
+
+        <!-- 読み込み -->
+        <section class="load-section">
+            <h2>保存済みセット</h2>
+            <div id="setList"></div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
